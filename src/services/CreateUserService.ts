@@ -10,7 +10,7 @@ interface UserRequest {
 class CreateUserService {
     async execute({ name, email, admin }: UserRequest) {
         const usersRepository = getCustomRepository(UsersRepositories)
-        console.log("Teste Email", email)
+
 
         if (!email) {
             throw new Error("Email incorrect")
